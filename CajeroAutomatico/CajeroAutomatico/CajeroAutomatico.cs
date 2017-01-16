@@ -77,6 +77,7 @@ namespace CajeroAutomatico
             {
                 dineroRest = dineroRest - 1;
                 monedasPeso++;
+                
             }
 
             return monedasPeso;

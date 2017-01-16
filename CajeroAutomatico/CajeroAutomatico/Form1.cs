@@ -26,10 +26,9 @@ namespace CajeroAutomatico
         {
             CajeroAutomatico obj = new CajeroAutomatico();
             //int dinero = Convert.ToInt32(textBox1.Text);
-
+            textBox1.Text = textBox1.Text.Remove(textBox1.TextLength - 1);
             //obj.ObtenerDatos(dinero);
-        
-        
+
             
             /*
             MessageBox.Show("Billetes 1000: " + obj.CalcularBilletesMil().ToString());
@@ -39,6 +38,20 @@ namespace CajeroAutomatico
             MessageBox.Show("Monedas 10: " + obj.CalcularMonedasDiez().ToString());
             MessageBox.Show("Monedas 1: " + obj.CalcularMonedasPeso().ToString());
             */
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btn_Corregir_Click(object sender, EventArgs e)
+        {
+            if (txt_Cantidad.TextLength != 0)
+            {
+              txt_Cantidad.Text = txt_Cantidad.Text.Substring(0, txt_Cantidad.Text.Count() - 1);
+            }
+            
         }
     }
 }
